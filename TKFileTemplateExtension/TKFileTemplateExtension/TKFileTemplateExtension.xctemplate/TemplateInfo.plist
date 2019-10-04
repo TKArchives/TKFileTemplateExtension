@@ -75,6 +75,125 @@
 					<string>Contents/Developer/Platforms/AppleTVOS.platform/Developer/Library/Xcode/Templates</string>
 				</dict>
 			</dict>
+			<key>Units</key>
+			<dict>
+				<key>OSXPlatform</key>
+				<array>
+					<dict>
+						<key>Nodes</key>
+						<array>
+							<string>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms</string>
+							<string>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms:OSXPlatform</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms</key>
+							<dict>
+								<key>Beginning</key>
+								<string>&lt;key&gt;Platforms&lt;/key&gt;
+&lt;array&gt;</string>
+								<key>End</key>
+								<string>&lt;/array&gt;</string>
+								<key>Indent</key>
+								<integer>1</integer>
+								<key>SortOrder</key>
+								<integer>1003</integer>
+								<key>SubstituteMacros</key>
+								<true/>
+							</dict>
+							<key>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms:OSXPlatform</key>
+							<string>&lt;string&gt;com.apple.platform.macosx&lt;/string&gt;</string>
+						</dict>
+					</dict>
+				</array>
+				<key>iOSPlatform</key>
+				<array>
+					<dict>
+						<key>Nodes</key>
+						<array>
+							<string>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms</string>
+							<string>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms:iOSPlatform</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms</key>
+							<dict>
+								<key>Beginning</key>
+								<string>&lt;key&gt;Platforms&lt;/key&gt;
+&lt;array&gt;</string>
+								<key>End</key>
+								<string>&lt;/array&gt;</string>
+								<key>Indent</key>
+								<integer>1</integer>
+								<key>SortOrder</key>
+								<integer>1003</integer>
+								<key>SubstituteMacros</key>
+								<true/>
+							</dict>
+							<key>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms:iOSPlatform</key>
+							<string>&lt;string&gt;com.apple.platform.iphoneos&lt;/string&gt;</string>
+						</dict>
+					</dict>
+				</array>
+				<key>watchOSPlatform</key>
+				<array>
+					<dict>
+						<key>Nodes</key>
+						<array>
+							<string>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms</string>
+							<string>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms:watchOSPlatform</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms</key>
+							<dict>
+								<key>Beginning</key>
+								<string>&lt;key&gt;Platforms&lt;/key&gt;
+&lt;array&gt;</string>
+								<key>End</key>
+								<string>&lt;/array&gt;</string>
+								<key>Indent</key>
+								<integer>1</integer>
+								<key>SortOrder</key>
+								<integer>1003</integer>
+								<key>SubstituteMacros</key>
+								<true/>
+							</dict>
+							<key>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms:watchOSPlatform</key>
+							<string>&lt;string&gt;com.apple.platform.watchos&lt;/string&gt;</string>
+						</dict>
+					</dict>
+				</array>
+				<key>tvOSPlatform</key>
+				<array>
+					<dict>
+						<key>Nodes</key>
+						<array>
+							<string>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms</string>
+							<string>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms:tvOSPlatform</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms</key>
+							<dict>
+								<key>Beginning</key>
+								<string>&lt;key&gt;Platforms&lt;/key&gt;
+&lt;array&gt;</string>
+								<key>End</key>
+								<string>&lt;/array&gt;</string>
+								<key>Indent</key>
+								<integer>1</integer>
+								<key>SortOrder</key>
+								<integer>1003</integer>
+								<key>SubstituteMacros</key>
+								<true/>
+							</dict>
+							<key>___VARIABLE_productName___.xctemplate/TemplateInfo.plist:Platforms:tvOSPlatform</key>
+							<string>&lt;string&gt;com.apple.platform.appletvos&lt;/string&gt;</string>
+						</dict>
+					</dict>
+				</array>
+			</dict>
 		</dict>
 		<dict>
 			<key>Identifier</key>
@@ -156,11 +275,17 @@
 			<dict>
 				<key>optional</key>
 				<string>true</string>
+				<key>basePlatform</key>
+				<array>
+					<string>iOSPlatform</string>
+					<string>watchOSPlatform</string>
+					<string>tvOSPlatform</string>
+				</array>
 			</dict>
 			<key>Identifier</key>
 			<string>OSXPlatform</string>
 			<key>Name</key>
-			<string>Used for the macOS Application</string>
+			<string>Also used for the macOS Application</string>
 			<key>NotPersisted</key>
 			<false/>
 			<key>Type</key>
@@ -205,11 +330,17 @@
 			<dict>
 				<key>optional</key>
 				<string>true</string>
+				<key>basePlatform</key>
+				<array>
+					<string>OSXPlatform</string>
+					<string>watchOSPlatform</string>
+					<string>tvOSPlatform</string>
+				</array>
 			</dict>
 			<key>Identifier</key>
 			<string>iOSPlatform</string>
 			<key>Name</key>
-			<string>Used for the iOS Application</string>
+			<string>Also used for the iOS Application</string>
 			<key>NotPersisted</key>
 			<false/>
 			<key>Type</key>
@@ -254,11 +385,17 @@
 			<dict>
 				<key>optional</key>
 				<string>true</string>
+				<key>basePlatform</key>
+				<array>
+					<string>OSXPlatform</string>
+					<string>iOSPlatform</string>
+					<string>tvOSPlatform</string>
+				</array>
 			</dict>
 			<key>Identifier</key>
 			<string>watchOSPlatform</string>
 			<key>Name</key>
-			<string>Used for the watchOS Application</string>
+			<string>Also used for the watchOS Application</string>
 			<key>NotPersisted</key>
 			<false/>
 			<key>Type</key>
@@ -303,11 +440,17 @@
 			<dict>
 				<key>optional</key>
 				<string>true</string>
+				<key>basePlatform</key>
+				<array>
+					<string>OSXPlatform</string>
+					<string>iOSPlatform</string>
+					<string>watchOSPlatform</string>
+				</array>
 			</dict>
 			<key>Identifier</key>
 			<string>tvOSPlatform</string>
 			<key>Name</key>
-			<string>Used for the tvOS Application</string>
+			<string>Also used for the tvOS Application</string>
 			<key>NotPersisted</key>
 			<false/>
 			<key>Type</key>
